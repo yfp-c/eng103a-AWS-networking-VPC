@@ -40,4 +40,30 @@ The steps below are the general steps we need to take.
 - step 5: create a security group in our public subnet to allow required ports/traffic:
 - - allow port 80 port 3000, http -ssl
 
+These are the specific steps to take on AWS
+## Step 1: Creating a VPC
+- On the AWS dashboard search for VPC and create VPC
+- Type an appropriate name such as `eng103a_name_vpc` and an add IPv4 CDIR block such as `10.0.0.0/16
 
+## Step 2: Create Internet Gateway
+- Select Internet Gateways on the left dashboard and create an internet gateway
+- in the options page, add an appropriate name tag such as `eng103a_name_IGW`
+- After creation, select the action drop down and attach your VPC
+
+## Step 3: Creating a subnet
+- Click subnet on the dashboard and create a subnet
+
+Creating a public and private subnet
+- Select the previously created VPC 
+- Enter a suitable name such as `eng103a_name_subnet_public`
+- Select the availability zone to the one you need
+- For public subnet and private subnets, differentiate the CIDR block ip changes. e.g. `public: 10.0.11.0/24, private: 10.0.12.0/24`
+
+## Step 4: Creating a route table
+- Select route table from the dashboard and create route table
+- Select your vpc
+- Enter an appropriate name such as `eng103a_name_RT_public`
+- After creation, click the action dropdown and select edit routes.
+- Select your internet gateway.
+
+NOTE: All of these steps follow the diagram!
