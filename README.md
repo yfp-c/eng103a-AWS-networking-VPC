@@ -20,6 +20,21 @@ a routing table tells the network to route traffic to if the destination isn't w
 A subnet is a subdivision of an IP network, which is a segment of the CIDR block. Specific EC2 instances can be launched into the subnet.
 
 ## What is NACL
-A network access control list (NACL) operates on a subnet level, it allows/denies inbound and outbound IPv4 traffic acting as a firewall.
+A network access control list (NACL) operates on a subnet level, it allows/denies inbound and outbound IPv4 traffic acting as a firewall. NACL on a subnet level, protects your instances (e.g. could be 1 or 10), whereas security groups act on an instance level.
 
-![aws vpcdiagram](https://user-images.githubusercontent.com/98178943/153402309-469354cf-49a3-48cc-902c-ca7964c8fb31.png)
+![aws vpcdiagram](https://user-images.githubusercontent.com/98178943/153408226-c9fa438d-9725-45e1-8fa0-c9fdd9e7a679.png)
+
+## Creating a VPC
+- Select the region - in this case Ireland
+- Create a VPC
+- Select a valid CDIR block for our VPC to split into blocks. e.g. 10.0.0.0/16
+- Step 2: Create an Internet Gateway(IGW)
+- step 2.1: Attach the IGW to our VPC
+- step 3: create a public subnet
+- step 3.1: associate subnet to VPC
+- Step 4: route table for publc subnet
+- step 4.1: edit routes to allow IG
+- step 4.2: associate to our public subnet
+- step 5: create a security group in our public subnet to allow required ports/traffic:
+- - allow port 80 port 3000, http -ssl
+- Create a subnet CIDR block for public - 10.0.1.0/24 - 10.0.2.0/24 - 10.0.3.0/24
