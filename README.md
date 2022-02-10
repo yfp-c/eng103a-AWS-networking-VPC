@@ -25,6 +25,8 @@ A network access control list (NACL) operates on a subnet level, it allows/denie
 ![aws vpcdiagram](https://user-images.githubusercontent.com/98178943/153408568-9c28c506-8194-433a-a8b8-6b2b63919921.png)
 
 ## Creating a VPC
+The steps below are the general steps we need to take.
+
 - Select the region - in this case Ireland
 - Create a VPC
 - Select a valid CDIR block for our VPC to split into blocks. e.g. 10.0.0.0/16
@@ -37,4 +39,5 @@ A network access control list (NACL) operates on a subnet level, it allows/denie
 - step 4.2: associate to our public subnet
 - step 5: create a security group in our public subnet to allow required ports/traffic:
 - - allow port 80 port 3000, http -ssl
-- Create a subnet CIDR block for public - 10.0.1.0/24 - 10.0.2.0/24 - 10.0.3.0/24
+
+
