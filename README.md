@@ -22,7 +22,7 @@ A subnet is a subdivision of an IP network, which is a segment of the CIDR block
 ## What is NACL
 A network access control list (NACL) operates on a subnet level, it allows/denies inbound and outbound IPv4 traffic acting as a firewall. NACL on a subnet level, protects your instances (e.g. could be 1 or 10), whereas security groups act on an instance level.
 
-![aws vpcdiagram](https://user-images.githubusercontent.com/98178943/153408226-c9fa438d-9725-45e1-8fa0-c9fdd9e7a679.png)
+![aws vpcdiagram](https://user-images.githubusercontent.com/98178943/153408568-9c28c506-8194-433a-a8b8-6b2b63919921.png)
 
 ## Creating a VPC
 - Select the region - in this case Ireland
